@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <!-- Allow cleartext (HTTP) traffic for specific domains -->
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">{DYNAMIC_IP}</domain>
+    </domain-config>
+
+    <!-- Block cleartext (HTTP) traffic by default for all other domains -->
+    <!-- <domain-config cleartextTrafficPermitted="false">
+        <domain includeSubdomains="true">restricted-domain.com</domain>
+    </domain-config> -->
+
+    <!-- Allow all HTTPS connections (safe by default) -->
+</network-security-config>

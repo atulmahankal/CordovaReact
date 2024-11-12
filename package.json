@@ -1,15 +1,40 @@
 {
-  "name": "io.cordova.hellocordova",
-  "displayName": "HelloCordova",
-  "version": "1.0.0",
-  "description": "A sample Apache Cordova application that responds to the deviceready event.",
-  "main": "index.js",
+  "name": "test.atulmahankal.cordovareact",
+  "displayName": "Cordova React",
+  "version": "0.1.0",
+  "description": "A powerful, cross-platform template to build mobile applications using Apache Cordova and React.",
+  "homepage": "https://atulmahankal.github.io/CordovaReact",
+  "main": "www/index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "cordova run --live-reload",
+    "android": "cordova run android --device --live-reload",
+    "sdk": "sdkmanager --list",
+    "postinstall": "cordova prepare",
+    "predeploy": "cordova build browser",
+    "deploy": "gh-pages -d platforms/browser/www"
   },
   "keywords": [
-    "ecosystem:cordova"
+    "cordova",
+    "react",
+    "mobile",
+    "native"
   ],
-  "author": "Apache Cordova Team",
-  "license": "Apache-2.0"
+  "author": "Atul Devichand Mahankal <atulmahankal@gmail.com> (https://atulmahankal.github.io/atulmahankal)",
+  "license": "Apache-2.0",
+  "cordova": {
+    "platforms": [
+      "browser",
+      "android"
+    ],
+    "plugins": {
+      "cordova-plugin-browsersync-gen2": {}
+    }
+  },
+  "devDependencies": {
+    "cordova": "^12.0.0",
+    "cordova-android": "^13.0.0",
+    "cordova-browser": "^7.0.0",
+    "cordova-plugin-browsersync-gen2": "^1.1.7",
+    "gh-pages": "^6.2.0"
+  }
 }

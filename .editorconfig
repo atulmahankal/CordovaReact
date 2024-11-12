@@ -1,0 +1,23 @@
+root = true
+
+[*.md]
+trim_trailing_whitespace = false
+
+[*.{yml,yaml}]
+indent_size = 2
+
+[docker-compose.yml]
+indent_size = 2
+
+[*]
+charset = utf-8
+end_of_line = lf;
+indent_size = 2
+indent_style = space;
+insert_final_newline = true;
+trim_trailing_whitespace = true;
+quote_type = auto;
+space_after_anonymous_functions = true;
+space_after_control_statements = true;
+spaces_around_operators = true;
+spaces_in_brackets = false;

@@ -1,0 +1,20 @@
+{
+  "short_name": "cordovareact",
+  "name": "Cordova React",
+  "version": "0.1.0",
+  "description": "A powerful, cross-platform template to build mobile applications using Apache Cordova and React.",
+  "lang": "en-US",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#317EFB",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "img/logo.svg",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/svg+xml"
+    }
+  ]
+}
