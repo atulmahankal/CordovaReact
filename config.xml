@@ -11,15 +11,14 @@
   <access origin="*" />
   <allow-intent href="http://*/*" />
   <allow-intent href="https://*/*" />
-
   <icon src="res/logo.xml" />
 
-  <hook type="before_prepare" src="hooks/before_prepare/update-config-from-package.js" />
-  <hook type="before_prepare" src="hooks/before_prepare/update-manifest-from-package.js" />
+  <hook type="before_run" src="hooks/update-config-from-package.js" />
+  <hook type="before_run" src="hooks/update-manifest-from-package.js" />
 
   <!-- Allow HTTP Traffic for Android 9 and above -->
   <platform name="android">
-    <hook type="before_prepare" src="hooks/before_prepare/copy_network_config.js" />
+    <hook type="before_prepare" src="hooks/copy_network_config.js" />
 
     <!-- Option 1: Allow HTTP traffic globally (for all domains) -->
     <!-- <edit-config file="AndroidManifest.xml" mode="merge" target="/manifest/application">
