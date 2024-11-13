@@ -6,9 +6,11 @@
   "homepage": "https://atulmahankal.github.io/CordovaReact",
   "main": "www/index.html",
   "scripts": {
-    "start": "cordova run --live-reload",
-    "android": "cordova run android --device --live-reload",
     "sdk": "sdkmanager --list",
+    "lint": "eslint www/**/* --fix",
+    "start": "npm run lint && npm run cordova:run",
+    "cordova:run": "cordova run --live-reload",
+    "android": "cordova run android --device --live-reload",
     "postinstall": "cordova prepare",
     "predeploy": "cordova build browser",
     "deploy": "gh-pages -d platforms/browser/www"
@@ -31,10 +33,13 @@
     }
   },
   "devDependencies": {
+    "@eslint/js": "^9.14.0",
     "cordova": "^12.0.0",
     "cordova-android": "^13.0.0",
     "cordova-browser": "^7.0.0",
     "cordova-plugin-browsersync-gen2": "^1.1.7",
-    "gh-pages": "^6.2.0"
+    "eslint": "^9.14.0",
+    "gh-pages": "^6.2.0",
+    "globals": "^15.12.0"
   }
 }
